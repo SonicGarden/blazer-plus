@@ -5,7 +5,7 @@ RSpec.describe Blazer::Plus do
     expect(Blazer::Plus::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "The initial value of Blazer::Plus.enabled is true" do
+    expect(Blazer::Plus.enabled).to eq(true)
   end
 end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "queries_controller"
+require 'rails/railtie'
+require_relative 'queries_controller'
 
 module Blazer
   module Plus
