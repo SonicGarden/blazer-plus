@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "plus/version"
+require_relative "plus/railtie"
 
 module Blazer
   module Plus

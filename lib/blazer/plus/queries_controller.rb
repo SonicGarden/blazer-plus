@@ -29,7 +29,7 @@ module Blazer
       private
 
       def blazer_danger_actionable!
-        if !blazer_user || !Blazer::Plus.blazer_danger_actionable_method.respond_to?(:call) && !Blazer::Plus.blazer_danger_actionable_method.call(blazer_user)
+        if !blazer_user || !Blazer::Plus.blazer_danger_actionable_method.respond_to?(:call) || !Blazer::Plus.blazer_danger_actionable_method.call(blazer_user)
           Rails.logger.warn "BlazerQueriesController##{action_name} was forbidden for #{blazer_user.inspect}"
           render plain: '403 Forbidden', status: :forbidden
         end
