@@ -1,13 +1,6 @@
-AllCops:
-  TargetRubyVersion: 2.6
-
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
+inherit_gem:
+  sgcop: ruby/rubocop.yml
 
 Layout/LineLength:
-  Max: 120
+  Exclude:
+    - "blazer-plus.gemspec"
