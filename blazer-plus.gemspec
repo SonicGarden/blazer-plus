@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Blazer Plus is a feature extension for the Blazer gem. It provides additional safety measures and enhancements to improve the user experience and security when using Blazer for database queries.'
   spec.homepage = 'https://github.com/SonicGarden/blazer-plus'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.1.0'
+  spec.required_ruby_version = '>= 3.0.0'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/SonicGarden/blazer-plus/'
