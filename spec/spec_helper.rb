@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'active_support'
 require 'blazer/plus'
 
 RSpec.configure do |config|
