@@ -18,12 +18,12 @@ module Blazer
         "\xEF\xBB\xBF#{super}"
       end
 
-      # NOTE: Support row_limit setting for HTML
+      # NOTE: Support row_limit setting.
+      # Don't check `request.format == :html`: blazer 3.5+ fetches results without an
+      # Accept header, so the format is */*. Only CSV download should be unlimited.
       def render_run
         row_limit = Blazer.settings.fetch('row_limit', DEFAULT_ROW_LIMIT)
-        if request.format == :html && row_limit
-          @row_limit ||= row_limit
-        end
+        @row_limit ||= row_limit if row_limit && !request.format.csv?
 
         super
       end
